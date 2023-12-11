@@ -19,7 +19,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: ${{matrix.os}}
+    runs-on: ${{matrix}}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macOS-latest]
@@ -41,6 +41,6 @@ jobs:
         docker login cred
         docker build
 
-  publish:
-
-    needs: build
+#  publish:
+#
+#    needs: build
