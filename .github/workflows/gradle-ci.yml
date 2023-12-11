@@ -36,10 +36,14 @@ jobs:
       with:
         arguments: build
 
-    - name: Build and Push Docker image
-      run:  |
-        docker login cred
-        docker build
+#    - uses: mr-smithers-excellent/docker-build-push@v6
+#      name: Build & push Docker image
+#      with:
+#        image: repo/image
+#        tags: v1, latest
+#        registry: registry-url.io
+#        username: ${{ secrets.DOCKER_USERNAME }}
+#        password: ${{ secrets.DOCKER_PASSWORD }}
 
 #  publish:
 #
